@@ -1,0 +1,52 @@
+/* Reset margin dan padding browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur halaman agar konten berada di tengah */
+body {
+    background-color: #252628;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mengatur wadah kartu mendukung ruang 3D */
+section.tilt-box {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Mengatur ukuran dan gambar background tanah */
+.card-bg {
+    width: 300px;
+    height: 450px;
+    background-image: url('Tanah.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* FIX UKURAN & WARNA: Foto pas di tengah, melayang, dan warna asli muncul */
+.player-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%; /* Diperkecil dari 85% agar pas di dalam frame background */
+    border-radius: 10px; /* Bikin pojokan fotomu sedikit melengkung rapi */
+    
+    /* RAHASIA 3D: translate untuk geser ke tengah, translateZ untuk ngangkat foto maju ke depan */
+    transform: translate(-50%, -50%) translateZ(60px); 
+    
+    /* Efek bayangan halus di belakang fotomu agar efek melayangnya makin berasa */
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.5)); 
+    
+    transition: transform 0.3s ease;
+}
