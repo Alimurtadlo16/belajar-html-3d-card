@@ -3,8 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Mengatur halaman agar konten berada di tengah */
 body {
     background-color: #252628;
     min-height: 100vh;
@@ -12,8 +10,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-/* Mengatur wadah kartu mendukung ruang 3D */
 section.tilt-box {
     transform-style: preserve-3d;
     perspective: 2500px;
@@ -34,14 +30,9 @@ section.tilt-box {
     position: absolute;
     top: 50%;
     left: 50%;
-    
-    /* Kita kecilkan ke 60% - 65% biar sisa space background di kanan-kiri-atas-bawah makin luas */
-    width: 65%; 
-    
+    width: 65%;     
     border-radius: 10px;
-    
-    /* Efek 3D tetap dipertahankan */
-    transform: translate(-50%, -50%) translateZ(60px); 
+        transform: translate(-50%, -50%) translateZ(60px); 
     filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.6));
     transition: transform 0.3s ease;
 }
