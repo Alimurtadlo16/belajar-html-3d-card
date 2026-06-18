@@ -25,12 +25,12 @@ section.tilt-box {
 
 /* Mengatur ukuran dan gambar background tanah */
 .card-bg {
-    width: 300px;
-    height: 450px;
-    background-image: url('Tanah.png');
+    width: 500px;
+    height: 650px;
+    background-image: url('Me.jpeg');
     background-size: cover;
     background-position: center;
-    border-radius: 15px;
+    border-radius: 20px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
 }
 
@@ -40,7 +40,7 @@ section.tilt-box {
     top: 50%;
     left: 50%;
     width: 75%; /* Diperkecil dari 85% agar pas di dalam frame background */
-    border-radius: 10px; /* Bikin pojokan fotomu sedikit melengkung rapi */
+    border-radius: 25px; /* Bikin pojokan fotomu sedikit melengkung rapi */
     
     /* RAHASIA 3D: translate untuk geser ke tengah, translateZ untuk ngangkat foto maju ke depan */
     transform: translate(-50%, -50%) translateZ(60px); 
